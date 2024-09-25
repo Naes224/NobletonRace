@@ -1,0 +1,50 @@
+.container {
+    position: relative; /* Set the container to relative positioning */
+    z-index: 1; /* Ensure the container is on top of the background image */
+    text-align: center; /* Center the content horizontally */
+    padding: 20px; /* Add some padding to the container */
+}
+
+html {
+    border: 40px solid #4400c2; /* Blue border, 40px thick */
+    border-radius: 0; /* Remove any default border radius */
+    box-sizing: border-box; /* Ensure the border is included in the width and height */
+    height: 100%; /* Make the html element take up the full height */
+}
+
+body {
+    height: 100%; /* Make the body element take up the full height */
+    margin: 0; /* Remove any default margin */
+    padding: 0; /* Remove any default padding */
+}
+
+h1 {
+    font-family: 'Dancing Script', cursive;
+    font-size: 65px;
+    font-weight: bold;
+    color: #4400c2; /* Blue color to match your border */
+}
+
+.title, .paragraph {
+    font-family: 'Dancing Script', cursive;
+    color: #4400c2; /* Blue color to match your border */
+    max-width: 500px; /* Set the maximum width to match your title */
+    margin: 0 auto; /* Add this to center the element horizontally */
+    text-align: center; /* Add this to center the text */
+}
+
+.title {
+    font-size: 80px;
+    font-weight: bold;
+}
+
+.paragraph {
+    font-size: 25px;
+    font-weight: normal;
+}
+
+.p2 {
+    font-size: 20px; /* Set the font size for the second paragraph */
+    font-style: italic; /* Set the font style to italic for the second paragraph */
+    margin-top: 20px; /* Add some space between the paragraphs */
+}

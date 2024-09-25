@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lock Page</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Enter the Code</h1>
+        <input type="password" id="codeInput" placeholder="Enter 4-digit code">
+        <button onclick="checkCode()">Submit</button>
+        <p id="result"></p>
+    </div>
+
+    <script>
+        function checkCode() {
+            const code = document.getElementById('codeInput').value;
+            const result = document.getElementById('result');
+
+            if (code === '6534') {
+                result.textContent = 'You Win!';
+                result.style.color = 'green';
+            } else {
+                result.textContent = 'Wrong Number';
+                result.style.color = 'red';
+            }
+        }
+    </script>
+</body>
+</html>

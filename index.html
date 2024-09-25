@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scavenger Hunt</title>
+    <script>
+        const users = {
+            "alyssa": "users/alyssa.html",
+            "eric": "users/eric.html",
+            "robbie": "users/robbie.html",
+            "mini": "users/mini.html",
+            "calista": "users/calista.html",
+            "mok": "users/mok.html",
+            "brendan": "users/brendan.html"
+        };
+
+        function checkName() {
+            const name = document.getElementById("nameInput").value.trim().toLowerCase();
+
+            if (name === "lock") {
+                window.location.href = "lock.html";  // Redirect to the lock page if "lock" is entered
+            } else if (name in users) {
+                window.location.href = users[name];  // Redirect to user-specific pages
+            } else {
+                document.getElementById("error-message").innerHTML = "Name not recognized. Try again!";
+            }
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <h1>Enter Your Name</h1>
+        <input type="text" id="nameInput" placeholder="Type your name here">
+        <button onclick="checkName()">Submit</button>
+        <p id="error-message"></p>
+    </div>
+</body>
+</html>
+
